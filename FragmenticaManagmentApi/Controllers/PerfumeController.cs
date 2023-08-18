@@ -12,7 +12,9 @@ public class PerfumeController : Controller
     {
         _mediator = mediator;
     }
-
+    
+    
+    [HttpGet("perfume/{guid}")]
     public async Task<IActionResult> GetPerfume(Guid guid)
     {
         await _mediator.Send(new GetPerfumeQuery(guid));

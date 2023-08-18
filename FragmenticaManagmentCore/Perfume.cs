@@ -1,4 +1,4 @@
-namespace FragmenticaManagment.Models;
+namespace FragmenticaManagmentCore;
 
 public class Perfume
 {
