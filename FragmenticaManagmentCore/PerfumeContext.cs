@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ClassLibrary1;
 
-public class PerfumeContext : DbContext
+public class FragmenticaContext : DbContext
 {
-    public PerfumeContext()
+    public FragmenticaContext()
     {
         
     }
