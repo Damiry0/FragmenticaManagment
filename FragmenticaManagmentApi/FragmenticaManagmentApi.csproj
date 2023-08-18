@@ -27,7 +27,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\FragmenticaManagmentCore\FragmenticaManagmentCore.csproj" />
-      <ProjectReference Include="..\FragmenticaManagmentCore\FragmenticaManagmentCore\FragmenticaManagmentCore.csproj" />
     </ItemGroup>
 
 </Project>

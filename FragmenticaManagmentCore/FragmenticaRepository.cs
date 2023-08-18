@@ -34,4 +34,9 @@ public class FragmenticaRepository : IRepository<FragmenticaContext>
     {
         _dbContext.SaveChanges();
     }
+
+    public async Task SaveAsync()
+    {
+        await _dbContext.SaveChangesAsync();
+    }
 }
