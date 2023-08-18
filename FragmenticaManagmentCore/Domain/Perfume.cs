@@ -1,4 +1,6 @@
+using ClassLibrary1.Domain.Enums;
 using FluentValidation;
+using FragmenticaManagmentCore.Domain;
 
 namespace FragmenticaManagmentCore;
 
@@ -8,8 +10,9 @@ public class Perfume
     public string Name { get; set; }
     public string Brand { get; set; }
     public string Description { get; set; }
-    public Enum Accords { get; set; }
+    public IEnumerable<Accord> Accords { get; set; }
     public float Rating { get; set; }
+    public Gender Gender { get; set; }
     
     public Perfume()
     {
