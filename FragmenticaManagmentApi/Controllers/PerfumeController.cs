@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FragmenticaManagment.Controllers;
 
-
 public class PerfumeController : Controller
 {
     private readonly IMediator _mediator;
@@ -21,4 +20,10 @@ public class PerfumeController : Controller
         return NoContent();
     }
     
+    [HttpGet("perfumes")]
+    public async Task<IActionResult> GetPerfumes(Guid guid)
+    {
+        await _mediator.Send(new GetPerfumesQuery());
+        return NoContent();
+    }
 }
