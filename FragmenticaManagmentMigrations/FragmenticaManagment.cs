@@ -1,5 +1,4 @@
-﻿using ClassLibrary1;
-using FragmenticaManagmentCore.Repository;
+﻿using FragmenticaManagmentCore.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;

@@ -4,8 +4,8 @@ namespace FragmenticaManagmentCore.Domain;
 
 public class Accord : ValueObject
 {
-    public string Name { get; set; }
-    public float Percentage { get; set; }
+    public string Name { get; private set; }
+    public float Percentage { get; private set; }
     public Accord(string name, float percentage)
     {
         Name = name;

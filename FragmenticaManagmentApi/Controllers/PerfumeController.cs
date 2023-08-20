@@ -21,7 +21,7 @@ public class PerfumeController : Controller
     }
     
     [HttpGet("perfumes")]
-    public async Task<IActionResult> GetPerfumes(Guid guid)
+    public async Task<IActionResult> GetPerfumes()
     {
         await _mediator.Send(new GetPerfumesQuery());
         return NoContent();
