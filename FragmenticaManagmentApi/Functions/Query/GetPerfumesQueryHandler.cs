@@ -1,5 +1,6 @@
 using FragmenticaManagment.Models.DTOs;
-using FragmenticaManagmentCore;
+using FragmenticaManagmentCore.Domain;
+using FragmenticaManagmentCore.Repository;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 

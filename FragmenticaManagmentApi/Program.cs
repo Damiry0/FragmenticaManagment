@@ -1,8 +1,7 @@
 using System.Reflection;
-using ClassLibrary1;
-using FragmenticaManagmentCore;
-using Microsoft.AspNetCore.Authentication;
+using FragmenticaManagmentCore.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Web;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,8 +16,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IRepository<FragmenticaContext>, FragmenticaRepository>();
+builder.Services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
 
+builder.Services.AddDbContext<FragmenticaContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 

@@ -1,5 +1,6 @@
 using FragmenticaManagment.Models.DTOs;
-using FragmenticaManagmentCore;
+using FragmenticaManagmentCore.Domain;
+using FragmenticaManagmentCore.Repository;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,7 +17,7 @@ public class GetPerfumeQueryHandler : IRequestHandler<GetPerfumeQuery, PerfumeDt
     public async Task<PerfumeDto> Handle(GetPerfumeQuery request, CancellationToken cancellationToken)
     {
         var perfume = await _perfumeRepository.GetAllAsNoTracking()
-            .FirstOrDefaultAsync(x => x.Id == request.guid, cancellationToken: cancellationToken);
+            .FirstOrDefaultAsync(x => x.Guid == request.guid, cancellationToken: cancellationToken);
 
         var perfumeDto = new PerfumeDto();
 

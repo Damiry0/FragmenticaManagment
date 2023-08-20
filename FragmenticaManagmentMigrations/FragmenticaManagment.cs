@@ -1,4 +1,5 @@
 ﻿using ClassLibrary1;
+using FragmenticaManagmentCore.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
@@ -17,6 +18,6 @@ public class FragmenticaManagmentContext : IDesignTimeDbContextFactory<Fragmenti
 
         builder.UseSqlServer(connectionString);
 
-        return new FragmenticaContext();
+        return new FragmenticaContext(builder.Options);
     }
 }

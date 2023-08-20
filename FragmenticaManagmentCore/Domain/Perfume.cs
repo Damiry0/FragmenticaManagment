@@ -1,12 +1,11 @@
 using ClassLibrary1.Domain.Enums;
 using FluentValidation;
-using FragmenticaManagmentCore.Domain;
+using FragmenticaManagmentCore.Repository;
 
-namespace FragmenticaManagmentCore;
+namespace FragmenticaManagmentCore.Domain;
 
-public class Perfume
+public class Perfume : Entity
 {
-    public Guid Id { get; set; }
     public string Name { get; set; }
     public string Brand { get; set; }
     public string Description { get; set; }
@@ -16,7 +15,7 @@ public class Perfume
     
     public Perfume()
     {
-        Id = Guid.NewGuid();
+        Guid = Guid.NewGuid();
         Validate(this);
     }
 
