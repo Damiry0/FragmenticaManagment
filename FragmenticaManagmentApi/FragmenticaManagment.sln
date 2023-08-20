@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FragmenticaManagmentMigrati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FragmenticaManagmentTests", "..\FragmenticaManagmentTests\FragmenticaManagmentTests.csproj", "{996E65C0-F856-4453-A86C-4A0BC82059EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FragmenticaManagmentInfrastracture", "..\FragmenticaManagmentInfrastracture\FragmenticaManagmentInfrastracture\FragmenticaManagmentInfrastracture.csproj", "{754551CD-8317-4109-8226-870A8FA4A794}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{996E65C0-F856-4453-A86C-4A0BC82059EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{996E65C0-F856-4453-A86C-4A0BC82059EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{996E65C0-F856-4453-A86C-4A0BC82059EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{754551CD-8317-4109-8226-870A8FA4A794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{754551CD-8317-4109-8226-870A8FA4A794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{754551CD-8317-4109-8226-870A8FA4A794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{754551CD-8317-4109-8226-870A8FA4A794}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
