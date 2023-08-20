@@ -21,8 +21,7 @@ jobs:
       with:
         dotnet-version: 7.0.x
     - name: Restore dependencies
-      run: dotnet restore
-      working-directory: FragmenticaManagmentApi/
+      run: dotnet restore FragmenticaManagmentApi/FragmenticaManagment.sln
     - name: Build
       run: dotnet build --no-restore
     - name: Test
