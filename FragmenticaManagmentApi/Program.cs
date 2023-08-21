@@ -21,8 +21,9 @@ builder.Services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
 
 builder.Services.AddDbContext<FragmenticaContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"), options =>
-{
-    options.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
+    {
+        options.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
+        options.MigrationsAssembly("FragmenticaManagmentMigrations");
 }));
 
 var app = builder.Build();

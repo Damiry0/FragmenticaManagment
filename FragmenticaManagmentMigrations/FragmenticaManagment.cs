@@ -1,4 +1,5 @@
-﻿using FragmenticaManagmentCore.Repository;
+﻿using System.Reflection;
+using FragmenticaManagmentCore.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
@@ -9,13 +10,13 @@ public class FragmenticaManagmentContext : IDesignTimeDbContextFactory<Fragmenti
 {
     public FragmenticaContext CreateDbContext(string[] args)
     {
-        var configurationBuilder = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.json", false, true);
-        var configuration = configurationBuilder.Build();
-        var builder = new DbContextOptionsBuilder<FragmenticaContext>();
-        var connectionString = configuration.GetConnectionString("DefaultConnection");
-
-        builder.UseSqlServer(connectionString);
+        var connectionString = new ConfigurationBuilder()
+            .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+            .AddJsonFile("appsettings.json", false, true)
+            .Build()
+            .GetConnectionString("DefaultConnection");
+        var builder = new DbContextOptionsBuilder<FragmenticaContext>()
+            .UseSqlServer(connectionString);
 
         return new FragmenticaContext(builder.Options);
     }

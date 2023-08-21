@@ -17,7 +17,11 @@ public class FragmenticaContext : DbContext
             .AddJsonFile("appsettings.json", false, true)
             .Build()
             .GetConnectionString("DefaultConnection");
-        optionsBuilder.UseSqlServer(connectionString);
+        optionsBuilder.UseSqlServer(connectionString, options =>
+        {
+            options.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
+            options.MigrationsAssembly("FragmenticaManagmentMigrations");
+        });
         optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
     }
 
