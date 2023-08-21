@@ -17,6 +17,7 @@ public class GetPerfumesQueryHandler : IRequestHandler<GetPerfumesQuery, List<Pe
     public async Task<List<PerfumeDto>> Handle(GetPerfumesQuery request, CancellationToken cancellationToken)
     {
         var perfumes = await _perfumeRepository.GetAllAsNoTracking()
+            .Include(x => x.Accords)
             .Select(x => new PerfumeDto())
             .ToListAsync(cancellationToken: cancellationToken);
 
