@@ -1,6 +1,6 @@
+using FragmenticaManagment.Abstractions;
 using FragmenticaManagment.Models.DTOs;
-using MediatR;
 
 namespace FragmenticaManagment.Functions.Query;
 
-public record GetPerfumeQuery(Guid guid) : IRequest<PerfumeDto>;
+public record GetPerfumeQuery(Guid guid) : IQuery<PerfumeDto>;
