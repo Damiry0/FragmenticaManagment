@@ -6,6 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <UserSecretsId>aspnet-FragmenticaManagment-3DA99608-9562-429F-9F42-41ABAB90B136</UserSecretsId>
         <RootNamespace>FragmenticaManagment</RootNamespace>
+        <LangVersion>preview</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
