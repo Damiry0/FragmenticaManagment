@@ -1,5 +1,6 @@
 using System.Reflection;
 using FragmenticaManagmentCore.Repository;
+using FragmenticaManagmentInfrastracture;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Web;
@@ -12,7 +13,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
-builder.Services.AddControllers();
+builder.Services.AddControllers( options =>
+{
+    options.Filters.Add(typeof(ExceptionFilter));
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
