@@ -25,7 +25,7 @@ namespace FragmenticaManagmentMigrations.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("FragmenticaManagmentCore.Domain.Perfume", b =>
+            modelBuilder.Entity("FragmenticaManagmentDomain.Domain.Perfume", b =>
                 {
                     b.Property<Guid>("Guid")
                         .ValueGeneratedOnAdd()
@@ -54,9 +54,9 @@ namespace FragmenticaManagmentMigrations.Migrations
                     b.ToTable("Perfumes");
                 });
 
-            modelBuilder.Entity("FragmenticaManagmentCore.Domain.Perfume", b =>
+            modelBuilder.Entity("FragmenticaManagmentDomain.Domain.Perfume", b =>
                 {
-                    b.OwnsMany("FragmenticaManagmentCore.Domain.Accord", "Accords", b1 =>
+                    b.OwnsMany("FragmenticaManagmentDomain.Domain.Accord", "Accords", b1 =>
                         {
                             b1.Property<Guid>("PerfumeGuid")
                                 .HasColumnType("uniqueidentifier");

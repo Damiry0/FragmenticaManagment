@@ -3,7 +3,6 @@ using FragmenticaManagment.Models.DTOs;
 using FragmenticaManagmentCore.Domain;
 using FragmenticaManagmentCore.Domain.Primitives;
 using FragmenticaManagmentCore.Repository;
-using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace FragmenticaManagment.Functions.Query;

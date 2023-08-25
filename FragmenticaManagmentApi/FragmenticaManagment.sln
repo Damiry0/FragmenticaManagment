@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FragmenticaManagmentApi", "FragmenticaManagmentApi.csproj", "{53660BD6-6618-4E07-8BD1-28558FFB5A21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FragmenticaManagmentCore", "..\FragmenticaManagmentCore\FragmenticaManagmentCore.csproj", "{48288586-8594-4731-B7DF-72FFC0D252E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FragmenticaManagmentDomain", "..\FragmenticaManagmentDomain\FragmenticaManagmentDomain.csproj", "{48288586-8594-4731-B7DF-72FFC0D252E2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FragmenticaManagmentMigrations", "..\FragmenticaManagmentMigrations\FragmenticaManagmentMigrations.csproj", "{549617FF-D204-4CE9-AD52-1B4ABDF00CF0}"
 EndProject
