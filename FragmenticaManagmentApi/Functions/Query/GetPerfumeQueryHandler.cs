@@ -8,23 +8,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FragmenticaManagment.Functions.Query;
 
-public class GetPerfumeQueryHandler : IQueryHandler<GetPerfumeQuery, PerfumeDto>
+public class GetPerfumeQueryHandler(IRepository<Perfume> perfumeRepository) : IQueryHandler<GetPerfumeQuery, PerfumeDto>
 {
-    private readonly IRepository<Perfume> _perfumeRepository;
-    
-    public GetPerfumeQueryHandler(IRepository<Perfume> perfumeRepository)
-    {
-        _perfumeRepository = perfumeRepository;
-    }
     public async Task<Result<PerfumeDto>> Handle(GetPerfumeQuery request, CancellationToken cancellationToken)
     {
-        var perfume = await _perfumeRepository.GetAllAsNoTracking()
+        var perfume = await perfumeRepository.GetAllAsNoTracking()
             .FirstOrDefaultAsync(x => x.Guid == request.guid, cancellationToken: cancellationToken);
 
         var perfumeDto = new PerfumeDto();
 
         return perfumeDto;
     }
-    
-    
 }

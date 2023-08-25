@@ -4,26 +4,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FragmenticaManagment.Controllers;
 
-public class PerfumeController : Controller
+public class PerfumeController(ISender mediator) : Controller
 {
-    private readonly IMediator _mediator;
-    public PerfumeController(IMediator mediator)
-    {
-        _mediator = mediator;
-    }
-    
-    
-    [HttpGet("perfume/{guid}")]
+    [HttpGet("perfume/{guid:guid}")]
     public async Task<IActionResult> GetPerfume(Guid guid)
     {
-        await _mediator.Send(new GetPerfumeQuery(guid));
+        await mediator.Send(new GetPerfumeQuery(guid));
         return NoContent();
     }
     
     [HttpGet("perfumes")]
     public async Task<IActionResult> GetPerfumes()
     {
-        await _mediator.Send(new GetPerfumesQuery());
+        await mediator.Send(new GetPerfumesQuery());
         return NoContent();
     }
 }
