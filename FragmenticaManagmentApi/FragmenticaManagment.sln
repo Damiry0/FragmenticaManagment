@@ -10,6 +10,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FragmenticaManagmentTests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FragmenticaManagmentInfrastracture", "..\FragmenticaManagmentInfrastracture\FragmenticaManagmentInfrastracture\FragmenticaManagmentInfrastracture.csproj", "{754551CD-8317-4109-8226-870A8FA4A794}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FragmenticaManagement", "FragmenticaManagement", "{8258857D-4225-48EB-B7D8-DC59B69143EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserManagement", "UserManagement", "{7C17075F-27E6-48BA-94A6-EA95B050C24A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagementApi", "..\..\UserManagement\UserManagementApi\UserManagementApi.csproj", "{E20720BE-781E-4AD0-87F9-20BE7C4948C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,7 +42,17 @@ Global
 		{754551CD-8317-4109-8226-870A8FA4A794}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{754551CD-8317-4109-8226-870A8FA4A794}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{754551CD-8317-4109-8226-870A8FA4A794}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E20720BE-781E-4AD0-87F9-20BE7C4948C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E20720BE-781E-4AD0-87F9-20BE7C4948C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E20720BE-781E-4AD0-87F9-20BE7C4948C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E20720BE-781E-4AD0-87F9-20BE7C4948C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{53660BD6-6618-4E07-8BD1-28558FFB5A21} = {8258857D-4225-48EB-B7D8-DC59B69143EC}
+		{48288586-8594-4731-B7DF-72FFC0D252E2} = {8258857D-4225-48EB-B7D8-DC59B69143EC}
+		{754551CD-8317-4109-8226-870A8FA4A794} = {8258857D-4225-48EB-B7D8-DC59B69143EC}
+		{549617FF-D204-4CE9-AD52-1B4ABDF00CF0} = {8258857D-4225-48EB-B7D8-DC59B69143EC}
+		{996E65C0-F856-4453-A86C-4A0BC82059EE} = {8258857D-4225-48EB-B7D8-DC59B69143EC}
+		{E20720BE-781E-4AD0-87F9-20BE7C4948C2} = {7C17075F-27E6-48BA-94A6-EA95B050C24A}
 	EndGlobalSection
 EndGlobal
