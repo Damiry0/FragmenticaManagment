@@ -9,9 +9,9 @@ public class PerfumeController(ISender mediator) : Controller
 {
     [HttpGet("perfume/{guid:guid}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public async Task<IActionResult> GetPerfume(Guid guid)
+    public async Task<IActionResult> GetPerfume(Ulid ulid)
     {
-        await mediator.Send(new GetPerfumeQuery(guid));
+        await mediator.Send(new GetPerfumeQuery(ulid));
         return Ok();
     }
     

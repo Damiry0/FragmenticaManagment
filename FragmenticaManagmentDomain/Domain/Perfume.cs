@@ -9,13 +9,16 @@ public class Perfume : Entity
     public string Name { get; set; }
     public string Brand { get; set; }
     public string Description { get; set; }
-    public IEnumerable<Accord> Accords { get; set; }
     public float Rating { get; set; }
     public Gender Gender { get; set; }
+    public int beka { get; set; }
+    
+    private readonly List<Accord> _accords = new();
+    public IReadOnlyCollection<Accord> Accords => _accords.AsReadOnly();
     
     public Perfume()
     {
-        Guid = Guid.NewGuid();
+        Ulid = Ulid.NewUlid();
         Validate(this);
     }
 

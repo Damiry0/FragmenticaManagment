@@ -5,5 +5,5 @@ namespace FragmenticaManagmentCore.Repository;
 public abstract class Entity
 {
     [Key]
-    public Guid Guid { get; init; }
+    public Ulid Ulid { get; protected init; }
 }

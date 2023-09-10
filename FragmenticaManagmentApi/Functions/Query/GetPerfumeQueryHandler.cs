@@ -12,7 +12,7 @@ public class GetPerfumeQueryHandler(IRepository<Perfume> perfumeRepository) : IQ
     public async Task<Result<PerfumeDto>> Handle(GetPerfumeQuery request, CancellationToken cancellationToken)
     {
         var perfume = await perfumeRepository.GetAllAsNoTracking()
-            .FirstOrDefaultAsync(x => x.Guid == request.guid, cancellationToken: cancellationToken);
+            .FirstOrDefaultAsync(x => x.Ulid == request.ulid, cancellationToken: cancellationToken);
 
         var perfumeDto = new PerfumeDto();
 
